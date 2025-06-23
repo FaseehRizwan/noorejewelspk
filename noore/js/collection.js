@@ -29,7 +29,7 @@ function renderProducts(products) {
         <h3>${product.title}</h3>
         <div class="price">${product.original ? `<span class="original">PKR ${product.original}</span> ` : ''}PKR ${product.price}</div>
         <a href="${product.detailsLink}" class="btn outline-btn">View Details</a>
-        <a href="${product.whatsappLink}" class="whatsapp-order" target="_blank"><i class="fab fa-whatsapp"></i> Order via WhatsApp</a>
+        <a href="${product.whatsappLink}" class="whatsapp-order" target="_blank"><i class="fab fa-whatsapp"></i> Order Now</a>
     </div>
 `;
                 grid.appendChild(card);
