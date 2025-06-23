@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nooré Jewels - Luxury Affordable Jewelry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loader">
+        <div class="loader-content">
+            <div class="loader-logo">Nooré Jewels</div>
+            <div class="loader-spinner"></div>
+        </div>
+    </div>
+<!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <a href="/">Nooré Jewels</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="collection.html">Collection</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="help.html">Help</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                 <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
+                <ul>
+                    <li><a href="/" class="active">Home</a></li>
+                    <li><a href="collection.html">Collection</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                     <li><a href="help.html">Help</a></li>
+                </ul>
+            </div>
+            <div class="header-actions">
+                <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-bag"></i> <span class="cart-count">0</span></a>
+                <a href="https://wa.me/923238971628?text=Hi%20Noor%C3%A9%20Jewels,%20I'd%20like%20to%20place%20an%20order" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> <span>Order Now</span></a>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-slider">
+            <div class="hero-slide active" style="background-image: url('images/hero.png');">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1><span>Elegant.</span> <span>Affordable.</span></h1>
+                        <h2>Nooré Jewels.</h2>
+                        <p>Adorn yourself with timeless elegance that doesn't break the bank.</p>
+                        <a href="collection.html" class="btn primary-btn">Shop Collection</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide" style="background-image: url('images/hero-bg.jpg');">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1><span>Eid Sale</span></h1>
+                        <h2>Big Deals Out!</h2>
+                        <p>Discover our Big Deals with Free Deliveries as Our Eid Sale!</p>
+                        <a href="collection.html" class="btn primary-btn">See New Arrivals</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slide" style="background-color: #8a8988;">
+                <div class="container">
+                    <div class="hero-content">
+                        <h1><span>Gift Luxury.</span></h1>
+                        <h2>Perfect Presents</h2>
+                        <p>Surprise your loved ones with jewelry that tells a story.</p>
+                        <a href="collection.html" class="btn primary-btn">Shop Gifts</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-slider-controls">
+                <span class="hero-dot active"></span>
+                <span class="hero-dot"></span>
+                <span class="hero-dot"></span>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="featured-products">
+            <div class="container">
+                <h2 class="section-title">Featured Collection</h2>
+                <div class="products-grid" id="featured-products-grid">
+                    <!-- Featured products will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="why-choose">
+            <div class="container">
+                <h2 class="section-title">Why Nooré?</h2>
+                <div class="features-grid">
+                    <div class="feature">
+                        <i class="fas fa-truck"></i>
+                        <h3>Fast Delivery</h3>
+                        <p>Receive your jewelry within 3-5 business days, safely packaged to maintain its beauty.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-gem"></i>
+                        <h3>Premium Quality</h3>
+                        <p>Handcrafted with attention to detail using materials selected for durability and beauty.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-money-bill"></i>
+                        <h3>Cash on Delivery</h3>
+                        <p>Pay when your order arrives at your doorstep with secure payment options.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fab fa-whatsapp"></i>
+                        <h3>WhatsApp Orders</h3>
+                        <p>Convenient ordering via chat with personalized assistance for your selection.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instagram Feed -->
+        <section class="instagram-feed">
+            <div class="container">
+                <h2 class="section-title">Follow Us <a href="https://instagram.com/noorejewelpk" target="_blank">@noorejewelpk</a></h2>
+                <div class="instagram-grid">
+                    <div class="insta-image">
+                        <a href="https://www.instagram.com/p/POST_ID_1/" target="_blank" rel="noopener">
+                            <img src="images/insta1.jpg" alt="Instagram Post">
+                            <div class="insta-overlay">
+                                <i class="fab fa-instagram insta-icon"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="insta-image">
+                        <a href="https://www.instagram.com/p/POST_ID_2/" target="_blank" rel="noopener">
+                            <img src="images/insta2.jpg" alt="Instagram Post">
+                            <div class="insta-overlay">
+                                <i class="fab fa-instagram insta-icon"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="insta-image">
+                        <a href="https://www.instagram.com/p/POST_ID_3/" target="_blank" rel="noopener">
+                            <img src="images/insta3.jpg" alt="Instagram Post">
+                            <div class="insta-overlay">
+                                <i class="fab fa-instagram insta-icon"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="insta-image">
+                        <a href="https://www.instagram.com/p/POST_ID_4/" target="_blank" rel="noopener">
+                            <img src="images/insta4.jpg" alt="Instagram Post">
+                            <div class="insta-overlay">
+                                <i class="fab fa-instagram insta-icon"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="insta-image">
+                        <a href="https://www.instagram.com/p/POST_ID_5/" target="_blank" rel="noopener">
+                            <img src="images/hero-bg.jpg" alt="Instagram Post">
+                            <div class="insta-overlay">
+                                <i class="fab fa-instagram insta-icon"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+ <!-- Quick View Modal -->
+    <div class="modal" id="quick-view-modal">
+        <div class="modal-content">
+            <div class="close-modal" id="close-modal">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="quick-view-grid">
+                <div class="quick-view-image">
+                    <img src="images/products/1.jpg" alt="Product Name" id="modal-image">
+                </div>
+                <div class="quick-view-info">
+                    <div class="quick-view-category" id="modal-category">Category</div>
+                    <h2 class="quick-view-title" id="modal-title">Product Name</h2>
+                   
+                    <div class="quick-view-price" id="modal-price">PKR 1,499</div>
+                    <p class="quick-view-description" id="modal-description">
+                        This elegant piece is crafted with attention to detail, featuring high-quality materials that ensure durability and lasting beauty. Perfect for both everyday wear and special occasions.
+                    </p>
+                    <div class="quick-view-extra" id="modal-details-section" style="display:none;">
+                        <h4>Details</h4>
+                        <ul id="modal-details"></ul>
+                    </div>
+                    <div class="quick-view-extra" id="modal-shipping-section" style="display:none;">
+                        <h4>Shipping & Returns</h4>
+                        <p id="modal-shipping"></p>
+                    </div>
+                    <div class="quick-view-buttons">
+                        <a href="#" class="btn primary-btn" id="modal-view-details">View Full Details</a>
+                        <a href="#" class="btn outline-btn" id="modal-whatsapp">Order via WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="collection.html">Collection</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> <a href="tel:+923238971628">+92 323 8971628</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:noorejewelpk@gmail.com">noorejewelpk@gmail.com</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/923238971628">WhatsApp: +92 323 8971628</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Follow Us</h3>
+                    <p>Stay updated with our latest collections and offers.</p>
+                    <div class="social-icons">
+                        <a href="https://instagram.com/noorejewelpk" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com/noorejewelpk" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://tiktok.com/@noorejewelpk" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Nooré Jewels – Karachi, Pakistan | Founded by Jahzeba, Shafaq &amp; Faseeh. All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923238971628" class="floating-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- WhatsApp Order Modal -->
+    <div id="whatsapp-modal" class="wa-modal">
+        <div class="wa-modal-content">
+            <h3>WhatsApp Order Preview</h3>
+            <p id="wa-message-preview"></p>
+            <div class="wa-modal-actions">
+                <button id="wa-send-btn"><i class="fab fa-whatsapp"></i> Send on WhatsApp</button>
+                <button id="wa-cancel-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+<!-- Floating Chat Button -->
+<a href="#" class="floating-chat" id="floating-chat-btn" title="Chat with us">
+    <i class="fas fa-comments"></i>
+</a>
+
+<!-- Floating AI Chat Modal -->
+<div id="floating-chat-modal" class="chat-modal">
+    <div class="chat-modal-content">
+        <div class="chat-modal-header">
+            <span>Need Help?</span>
+            <button id="floating-chat-close-btn" class="chat-close-btn" aria-label="Close chat">&times;</button>
+        </div>
+        <div id="ai-chat-container" class="ai-chat-container ai-chat-upgraded" aria-live="polite" aria-atomic="false">
+            <p class="ai-empty-msg" id="ai-empty-msg">Type your question below or use quick questions to start a conversation with our AI assistant.</p>
+        </div>
+        <form class="ai-input-row ai-input-upgraded" autocomplete="off" onsubmit="event.preventDefault(); sendMessage(userInput.value);">
+            <label for="ai-user-input" class="visually-hidden">Your question</label>
+            <input type="text" id="ai-user-input" placeholder="Type your question here..." autocomplete="off" aria-label="Type your question here" />
+            <button id="ai-send-btn" class="btn primary-btn" type="submit" aria-label="Send message">
+                <i class="fas fa-paper-plane"></i>
+                <span class="visually-hidden">Send</span>
+            </button>
+        </form>
+        
+    </div>
+</div>
+    <script src="js/main.js" defer></script>
+    <script src="js/cart.js" defer></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Select all WhatsApp order buttons
+    const waButtons = document.querySelectorAll('.whatsapp-btn, .whatsapp-order, .floating-whatsapp');
+    const modal = document.getElementById('whatsapp-modal');
+    const preview = document.getElementById('wa-message-preview');
+    const sendBtn = document.getElementById('wa-send-btn');
+    const cancelBtn = document.getElementById('wa-cancel-btn');
+    let waUrl = '';
+
+    waButtons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            e.preventDefault();
+            // Try to get message from href, fallback to default
+            let msg = "Hi Nooré Jewels, I'd like to place an order for:\n\n- [Your product(s) here]\n\nPlease assist me with the purchase.";
+            let href = btn.getAttribute('href');
+            if (href && href.includes('wa.me') && href.includes('text=')) {
+                const urlParams = new URLSearchParams(href.split('?')[1]);
+                msg = decodeURIComponent(urlParams.get('text') || msg);
+            }
+            preview.textContent = msg;
+            waUrl = href ? href : `https://wa.me/923238971628?text=${encodeURIComponent(msg)}`;
+            modal.classList.add('active');
+        });
+    });
+
+    sendBtn.onclick = function() {
+        window.open(waUrl, '_blank');
+        modal.classList.remove('active');
+    };
+    cancelBtn.onclick = function() {
+        modal.classList.remove('active');
+    };
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) modal.classList.remove('active');
+    });
+});
+
+// Featured Products Fetch & Render
+document.addEventListener('DOMContentLoaded', function() {
+    fetch('/api/products')
+        .then(res => res.json())
+        .then(function(products) {
+            const grid = document.getElementById('featured-products-grid');
+            grid.innerHTML = '';
+            if (Array.isArray(products)) {
+                // Only show products with 'featured' in tags
+                const featured = products.filter(p => (p.tags || '').split(' ').includes('featured'));
+                if (featured.length === 0) {
+                    grid.innerHTML = '<p>No featured products found.</p>';
+                    return;
+                }
+                featured.forEach(product => {
+                    const card = document.createElement('div');
+                    card.className = 'product-card fade-element';
+                  // Add data attributes for consistency
+card.dataset.category = product.category;
+card.dataset.price = product.price;
+card.dataset.tags = product.tags || '';
+card.dataset.detailsLink = product.detailsLink || '#';
+card.dataset.whatsappLink = product.whatsappLink || '';
+card.dataset.description = product.description || '';
+card.dataset.details = product.details || '';
+card.dataset.shipping = product.shipping || '';
+card.innerHTML = `
+    <div class="product-image">
+        <img src="${product.image}" alt="${product.title}">
+        <div class="product-overlay">
+            <div class="product-actions">
+                <button class="action-btn quick-view-trigger" title="Quick View"><i class="fas fa-eye"></i></button>
+                <div class="action-btn add-to-cart" data-name="${product.title}" data-price="${product.price}" data-image="${product.image}" title="Add to Cart"><i class="fas fa-shopping-bag"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="product-info">
+        <div class="product-category">${product.category ? product.category.charAt(0).toUpperCase() + product.category.slice(1) : ''}</div>
+        <h3>${product.title}</h3>
+        <div class="price">${product.original ? `<span class="original">PKR ${product.original}</span> ` : ''}PKR ${product.price}</div>
+        <a href="${product.detailsLink}" class="btn outline-btn">View Details</a>
+        <a href="${product.whatsappLink}" class="whatsapp-order" target="_blank"><i class="fab fa-whatsapp"></i> Order via WhatsApp</a>
+    </div>
+`;
+grid.appendChild(card);
+setTimeout(() => card.classList.add('fade-in'), 10);
+
+                    // WhatsApp order button
+                    card.querySelector('.whatsapp-order').addEventListener('click', function(e) {
+                        e.preventDefault();
+                        window.open(this.href, '_blank');
+                    });
+
+                    // Add to cart button
+                    card.querySelector('.add-to-cart').addEventListener('click', function(e) {
+                        e.preventDefault();
+                        if (typeof handleAddToCart === 'function') {
+                            // Simulate a product card structure for handleAddToCart
+                            this.closest = () => card;
+                            handleAddToCart.call(this, e);
+                        } else {
+                            alert('Added to cart! (Implement cart logic)');
+                        }
+                    });
+
+                    // --- ADD THIS BLOCK FOR QUICK VIEW ---
+                    card.querySelector('.quick-view-trigger').addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const modal = document.getElementById('quick-view-modal');
+                        if (!modal) return;
+                        document.getElementById('modal-image').src = card.querySelector('img').src;
+                        document.getElementById('modal-image').alt = card.querySelector('h3').textContent;
+                        document.getElementById('modal-category').textContent = card.dataset.category || '';
+                        document.getElementById('modal-title').textContent = card.querySelector('h3').textContent;
+                        document.getElementById('modal-price').innerHTML = card.querySelector('.price').innerHTML;
+                        document.getElementById('modal-view-details').href = card.dataset.detailsLink || '#';
+                        document.getElementById('modal-whatsapp').href = card.dataset.whatsappLink || '#';
+
+                        // Description
+                        document.getElementById('modal-description').textContent = card.dataset.description || '';
+
+                        // Details
+                        const detailsSection = document.getElementById('modal-details-section');
+                        const detailsList = document.getElementById('modal-details');
+                        if (card.dataset.details) {
+                            detailsSection.style.display = '';
+                            let details = [];
+                            try {
+                                details = JSON.parse(card.dataset.details);
+                            } catch {
+                                details = card.dataset.details.split(/[\n;]+/).map(s => s.trim()).filter(Boolean);
+                            }
+                            detailsList.innerHTML = details.map(d => `<li>${d}</li>`).join('');
+                        } else {
+                            detailsSection.style.display = 'none';
+                            detailsList.innerHTML = '';
+                        }
+
+                        // Shipping
+                        const shippingSection = document.getElementById('modal-shipping-section');
+                        const shippingText = document.getElementById('modal-shipping');
+                        if (card.dataset.shipping) {
+                            shippingSection.style.display = '';
+                            shippingText.textContent = card.dataset.shipping;
+                        } else {
+                            shippingSection.style.display = 'none';
+                            shippingText.textContent = '';
+                        }
+
+                        modal.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+                    });
+                    // --- END QUICK VIEW BLOCK ---
+                });
+            }
+        });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Hero Slider Logic
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots = document.querySelectorAll('.hero-dot');
+    let current = 0;
+    let timer;
+
+    function showSlide(idx) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === idx);
+            dots[i].classList.toggle('active', i === idx);
+        });
+        current = idx;
+    }
+
+    function nextSlide() {
+        showSlide((current + 1) % slides.length);
+    }
+
+    function prevSlide() {
+        showSlide((current - 1 + slides.length) % slides.length);
+    }
+
+    dots.forEach((dot, idx) => {
+        dot.addEventListener('click', () => {
+            showSlide(idx);
+            resetTimer();
+        });
+    });
+
+    // Touch swipe support
+    let startX = 0;
+    let isSwiping = false;
+    const slider = document.querySelector('.hero-slider');
+
+    if (slider) {
+        slider.addEventListener('touchstart', function(e) {
+            if (e.touches.length === 1) {
+                startX = e.touches[0].clientX;
+                isSwiping = true;
+            }
+        });
+
+        slider.addEventListener('touchmove', function(e) {
+            // Prevent scrolling while swiping
+            if (isSwiping) e.preventDefault();
+        }, { passive: false });
+
+        slider.addEventListener('touchend', function(e) {
+            if (!isSwiping) return;
+            const endX = e.changedTouches[0].clientX;
+            const diff = endX - startX;
+            if (Math.abs(diff) > 50) {
+                if (diff < 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+                resetTimer();
+            }
+            isSwiping = false;
+        });
+    }
+
+    function resetTimer() {
+        clearInterval(timer);
+        timer = setInterval(nextSlide, 5000);
+    }
+
+    timer = setInterval(nextSlide, 5000);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Quick View modal for index page
+    if (document.getElementById('quick-view-modal')) {
+        if (typeof initQuickViewModal === 'function') {
+            initQuickViewModal();
+        }
+    }
+});
+
+
+    </script>
+</body>
+</html>

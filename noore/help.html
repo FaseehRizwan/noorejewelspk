@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & AI Assistant – Nooré Jewels</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Nooré Jewels</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="collection.html">Collection</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="help.html" class="active">Help</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
+                <ul>
+                    <li><a href="/" >Home</a></li>
+                    <li><a href="collection.html">Collection</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="help.html" class="active">Help</a></li>
+                </ul>
+            </div>
+            <div class="header-actions">
+                <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-bag"></i> <span class="cart-count">0</span></a>
+                <a href="https://wa.me/923238971628?text=Hi%20Noor%C3%A9%20Jewels,%20I'd%20like%20to%20place%20an%20order" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> <span>Order Now</span></a>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <div class="container">
+        <h1 class="section-title" style="margin-top:5rem;">Help & AI Assistant</h1>
+        <p class="mb-6" style="color:#555;">Need assistance? Ask our AI assistant anything about Nooré Jewels, our products, orders, or get instant answers to your questions below.</p>
+        <!-- Gemini API - AI Assistant Feature -->
+        <section class="ai-section ai-section-upgraded">
+          <h2 class="section-title ai-title">✨ Ask Our AI Assistant</h2>
+          <div id="ai-chat-container" class="ai-chat-container ai-chat-upgraded" aria-live="polite" aria-atomic="false">
+            <p class="ai-empty-msg" id="ai-empty-msg">Type your question below or use quick questions to start a conversation with our AI assistant.</p>
+          </div>
+          <form class="ai-input-row ai-input-upgraded" autocomplete="off" onsubmit="event.preventDefault(); sendMessage(userInput.value);">
+            <label for="ai-user-input" class="visually-hidden">Your question</label>
+            <input type="text" id="ai-user-input" placeholder="Type your question here..." autocomplete="off" aria-label="Type your question here" />
+            <button id="ai-send-btn" class="btn primary-btn" type="submit" aria-label="Send message">
+              <i class="fas fa-paper-plane"></i>
+              <span class="visually-hidden">Send</span>
+            </button>
+          </form>
+          <div class="ai-quick-questions ai-quick-upgraded" aria-label="Quick Questions">
+            <span>Quick Questions:</span>
+            <button type="button" class="btn outline-btn">What are your delivery charges?</button>
+            <button type="button" class="btn outline-btn">How do I place an order?</button>
+            <button type="button" class="btn outline-btn">What is your return policy?</button>
+            <button type="button" class="btn outline-btn">Do you offer custom jewelry?</button>
+            <button type="button" class="btn outline-btn">How can I contact support?</button>
+            <button type="button" class="btn outline-btn">Show me featured products</button>
+            <button type="button" class="btn outline-btn">What's in my cart?</button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="collection.html">Collection</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="help.html">Help</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> <a href="tel:+923238971628">+92 323 8971628</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:noorejewelpk@gmail.com">noorejewelpk@gmail.com</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/923238971628">WhatsApp</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="https://instagram.com/noorejewelpk" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com/noorejewelpk" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://tiktok.com/@noorejewelpk" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 Nooré Jewels – Karachi, Pakistan. All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923238971628" class="floating-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+      // --- AI Assistant with Cart & Product Awareness ---
+      const chatContainer = document.getElementById('ai-chat-container');
+      const userInput = document.getElementById('ai-user-input');
+      const sendBtn = document.getElementById('ai-send-btn');
+      const quickBtns = document.querySelectorAll('.ai-quick-questions button');
+      const emptyMsg = document.getElementById('ai-empty-msg');
+      let loading = false;
+      let productsCache = null;
+
+      // Helper: Format price
+      function formatCurrency(amount) {
+        let num = Number(amount);
+        if (!isFinite(num)) num = 0;
+        return 'PKR ' + num.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+      }
+
+      // Helper: Get cart from localStorage
+      function getCart() {
+        try {
+          return JSON.parse(localStorage.getItem('nooreCart')) || [];
+        } catch {
+          return [];
+        }
+      }
+
+      // Helper: Fetch products (from API)
+      function fetchProducts() {
+        if (productsCache) return Promise.resolve(productsCache);
+        return fetch('/api/products')
+          .then(res => res.json())
+          .then(products => {
+            productsCache = products;
+            return products;
+          });
+      }
+
+      function appendMessage(role, text) {
+        if (emptyMsg) emptyMsg.style.display = 'none';
+        const msgDiv = document.createElement('div');
+        msgDiv.className = 'ai-message ' + (role === 'user' ? 'user' : 'assistant');
+        msgDiv.innerHTML = text;
+        chatContainer.appendChild(msgDiv);
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+      }
+
+      function showTyping() {
+        const typingDiv = document.createElement('div');
+        typingDiv.className = 'ai-typing';
+        typingDiv.id = 'ai-typing';
+        typingDiv.innerText = 'AI is typing...';
+        chatContainer.appendChild(typingDiv);
+        chatContainer.scrollTop = chatContainer.scrollHeight;
+      }
+
+      function removeTyping() {
+        const typingDiv = document.getElementById('ai-typing');
+        if (typingDiv) typingDiv.remove();
+      }
+
+      // Main AI logic
+      function aiResponse(question) {
+        question = question.toLowerCase();
+
+        // Cart awareness
+        if (question.includes('cart') || question.includes('my order') || question.includes('shopping bag')) {
+          const cart = getCart();
+          if (!cart.length) {
+            return "Your cart is currently empty. Browse our <a href='collection.html'>collection</a> to add beautiful jewelry!";
+          }
+          let msg = `<strong>Your Cart:</strong><ul style="margin:8px 0 0 18px;">`;
+          let total = 0;
+          cart.forEach(item => {
+            const price = Number(item.price) * (item.quantity || 1);
+            total += price;
+            msg += `<li>${item.quantity || 1} × ${item.name} <span style="color:#888;">(${formatCurrency(price)})</span></li>`;
+          });
+          msg += `</ul><div style="margin-top:8px;"><strong>Subtotal:</strong> ${formatCurrency(total)}<br><strong>Shipping:</strong> PKR 250<br><strong>Total:</strong> ${formatCurrency(total + 250)}</div>`;
+          msg += `<div style="margin-top:10px;"><a href="cart.html" class="btn outline-btn" style="font-size:0.95rem;">View Cart & Checkout</a></div>`;
+          return msg;
+        }
+
+        // Featured products
+        if (question.includes('featured product') || question.includes('show me featured')) {
+          return fetchProducts().then(products => {
+            const featured = products.filter(p => (p.tags || '').includes('featured'));
+            if (!featured.length) return "No featured products found at the moment.";
+            let html = `<strong>Featured Products:</strong><ul style="margin:8px 0 0 18px;">`;
+            featured.slice(0, 3).forEach(p => {
+              html += `<li>
+                <a href="${p.detailsLink}" target="_blank">${p.title}</a> – <span style="color:#888;">${formatCurrency(p.price)}</span>
+              </li>`;
+            });
+            html += `</ul><div style="margin-top:8px;"><a href="collection.html" class="btn outline-btn" style="font-size:0.95rem;">See All</a></div>`;
+            return html;
+          });
+        }
+
+        // Product search by name
+        if (question.startsWith('show me ') || question.startsWith('find ') || question.includes('do you have')) {
+          return fetchProducts().then(products => {
+            let q = question.replace(/(show me|find|do you have|please|can you|tell me about)/gi, '').trim();
+            if (!q) return "Please specify the product name or type.";
+            const matches = products.filter(p =>
+              p.title.toLowerCase().includes(q) ||
+              (p.category && p.category.toLowerCase().includes(q)) ||
+              (p.tags && p.tags.toLowerCase().includes(q))
+            );
+            if (!matches.length) return `Sorry, I couldn't find any products matching "<b>${q}</b>".`;
+            let html = `<strong>Products matching "${q}":</strong><ul style="margin:8px 0 0 18px;">`;
+            matches.slice(0, 5).forEach(p => {
+              html += `<li>
+                <a href="${p.detailsLink}" target="_blank">${p.title}</a> – <span style="color:#888;">${formatCurrency(p.price)}</span>
+              </li>`;
+            });
+            html += `</ul>`;
+            return html;
+          });
+        }
+
+        // Quick FAQ
+        const responses = {
+          'delivery charges': 'Our delivery charges are <b>PKR 250</b> for Karachi and <b>PKR 300</b> for all other cities in Pakistan.',
+          'place an order': 'To place an order, add your favorite jewelry to the cart and proceed to checkout, or order directly via WhatsApp.',
+          'return policy': 'We do not offer any return or refund policy. All sales are final.',
+          'refund policy': 'We do not offer any return or refund policy. All sales are final.',
+          'custom jewelry': 'We do not offer custom jewelry at this time.',
+          'contact support': 'You can contact our support via WhatsApp, email, or phone. All details are listed above.'
+        };
+        for (let key in responses) {
+          if (question.includes(key)) return responses[key];
+        }
+
+        // Default
+        return "I'm here to help! Ask about our products, your cart, or anything Nooré Jewels.";
+      }
+
+      function sendMessage(msg) {
+        if (!msg.trim() || loading) return;
+        appendMessage('user', msg);
+        userInput.value = '';
+        loading = true;
+        showTyping();
+
+        // Handle async AI responses (for products)
+        const response = aiResponse(msg);
+        if (typeof response === 'string') {
+          setTimeout(() => {
+            removeTyping();
+            appendMessage('assistant', response);
+            loading = false;
+          }, 1000);
+        } else if (response instanceof Promise) {
+          response.then(res => {
+            removeTyping();
+            appendMessage('assistant', res);
+            loading = false;
+          });
+        }
+      }
+
+      sendBtn.onclick = () => sendMessage(userInput.value);
+      userInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') sendMessage(userInput.value);
+      });
+      quickBtns.forEach(btn => {
+        btn.onclick = () => sendMessage(btn.innerText);
+      });
+    </script>
+    <script src="js/main.js" defer></script>
+    <script src="js/cart.js" defer></script>
+</body>
+</html>

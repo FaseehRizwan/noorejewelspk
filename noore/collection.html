@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection - Nooré Jewels</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <style>
+      .quick-view-price .original {
+        text-decoration: line-through;
+        color: #999;
+        font-weight: 400;
+        font-size: 0.9em;
+        margin-right: 8px;
+      }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+     <header class="site-header">
+        <div class="container">
+            <div class="logo">
+                <a href="/">Nooré Jewels</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="collection.html" class="active">Collection</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="help.html">Help</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                 <button class="mobile-menu-close" aria-label="Close menu">&times;</button>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="collection.html" class="active">Collection</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="help.html">Help</a></li>
+                </ul>
+            </div>
+            <div class="header-actions">
+                <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-bag"></i> <span class="cart-count">0</span></a>
+                <a href="https://wa.me/923238971628?text=Hi%20Noor%C3%A9%20Jewels,%20I'd%20like%20to%20place%20an%20order" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> <span>Order Now</span></a>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Collection Banner -->
+        <section class="page-banner">
+            <div class="container">
+                <h1>Our Collection</h1>
+                <p>Discover our handpicked selection of elegant jewelry pieces</p>
+            </div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="collection-filters">
+            <div class="container">
+                <div class="filters-container">
+                    <div class="filters">
+                        <div class="filter-group">
+                            <label class="filter-label">Category</label>
+                            <select class="filter-select" id="category-filter">
+                                <option value="all">All Categories</option>
+                                <option value="earrings">Earrings</option>
+                                <option value="necklaces">Necklaces</option>
+                                <option value="rings">Rings</option>
+                                <option value="bracelets">Bracelets</option>
+                                <option value="deals">Deals</option> <!-- Added -->
+                            </select>
+                        </div>
+                        <div class="filter-group">
+                            <label class="filter-label">Sort by</label>
+                            <select class="filter-select" id="sort-filter">
+                                <option value="default">Featured</option>
+                                <option value="price-asc">Price: Low to High</option>
+                                <option value="price-desc">Price: High to Low</option>
+                                <option value="newest">Newest First</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="item-count">Showing <span class="count-number" id="product-count">0</span> products</div>
+                </div>
+
+                <div class="quick-filters">
+                    <div class="quick-filter active" data-filter="all">All Items</div>
+                    <div class="quick-filter" data-filter="earrings">Earrings</div>
+                    <div class="quick-filter" data-filter="necklaces">Necklaces</div>
+                    <div class="quick-filter" data-filter="rings">Rings</div>
+                    <div class="quick-filter" data-filter="bracelets">Bracelets</div>
+                    <div class="quick-filter" data-filter="deals">Deals</div> <!-- Added -->
+                    <div class="quick-filter" data-filter="new">New Arrivals</div>
+                    <div class="quick-filter" data-filter="bestseller">Best Sellers</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Grid -->
+        <section class="collection-products">
+            <div class="container">
+                <!-- No Results Message -->
+                <div class="no-results" id="no-results">
+                    <i class="fas fa-search"></i>
+                    <h3>No products found</h3>
+                    <p>We couldn't find any products matching your current filters. Try adjusting your selection or browse our other categories.</p>
+                    <button class="reset-btn" id="reset-filters">Reset Filters</button>
+                </div>
+                
+                <div class="products-grid" id="products-grid"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Quick View Modal -->
+    <div class="modal" id="quick-view-modal">
+        <div class="modal-content">
+            <div class="close-modal" id="close-modal">
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="quick-view-grid">
+                <div class="quick-view-image">
+                    <img src="images/products/1.jpg" alt="Product Name" id="modal-image">
+                </div>
+                <div class="quick-view-info">
+                    <div class="quick-view-category" id="modal-category">Category</div>
+                    <h2 class="quick-view-title" id="modal-title">Product Name</h2>
+                
+                    <div class="quick-view-price" id="modal-price">PKR 1,499</div>
+                    <p class="quick-view-description" id="modal-description">
+                        This elegant piece is crafted with attention to detail, featuring high-quality materials that ensure durability and lasting beauty. Perfect for both everyday wear and special occasions.
+                    </p>
+                    <div class="quick-view-extra" id="modal-details-section" style="display:none;">
+                        <h4>Details</h4>
+                        <ul id="modal-details"></ul>
+                    </div>
+                    <div class="quick-view-extra" id="modal-shipping-section" style="display:none;">
+                        <h4>Shipping & Returns</h4>
+                        <p id="modal-shipping"></p>
+                    </div>
+                    <div class="quick-view-buttons">
+                        <a href="#" class="btn primary-btn" id="modal-view-details">View Full Details</a>
+                        <a href="#" class="btn outline-btn" id="modal-whatsapp">Order via WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="collection.html">Collection</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-phone"></i> <a href="tel:+923238971628">+92 323 8971628</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:noorejewelpk@gmail.com">noorejewelpk@gmail.com</a></li>
+                        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/923238971628">WhatsApp: +92 323 8971628</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="https://instagram.com/noorejewelpk" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com/noorejewelpk" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://tiktok.com/@noorejewelpk" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                  <p>© 2025 Nooré Jewels – Karachi, Pakistan. All Rights Reserved</p>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923238971628" class="floating-whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+<!-- WhatsApp Order Modal -->
+<div id="whatsapp-modal" class="wa-modal">
+    <div class="wa-modal-content">
+        <h3>WhatsApp Order Preview</h3>
+        <p id="wa-message-preview"></p>
+        <div class="wa-modal-actions">
+            <button id="wa-send-btn"><i class="fab fa-whatsapp"></i> Send on WhatsApp</button>
+            <button id="wa-cancel-btn">Cancel</button>
+        </div>
+    </div>
+</div>
+<!-- Floating Chat Button -->
+<a href="#" class="floating-chat" id="floating-chat-btn" title="Chat with us">
+    <i class="fas fa-comments"></i>
+</a>
+
+<!-- Floating AI Chat Modal -->
+<div id="floating-chat-modal" class="chat-modal">
+    <div class="chat-modal-content">
+        <div class="chat-modal-header">
+            <span>Need Help?</span>
+            <button id="floating-chat-close-btn" class="chat-close-btn" aria-label="Close chat">&times;</button>
+        </div>
+        <div id="ai-chat-container" class="ai-chat-container ai-chat-upgraded" aria-live="polite" aria-atomic="false">
+            <p class="ai-empty-msg" id="ai-empty-msg">Type your question below or use quick questions to start a conversation with our AI assistant.</p>
+        </div>
+        <form class="ai-input-row ai-input-upgraded" autocomplete="off" onsubmit="event.preventDefault(); sendMessage(userInput.value);">
+            <label for="ai-user-input" class="visually-hidden">Your question</label>
+            <input type="text" id="ai-user-input" placeholder="Type your question here..." autocomplete="off" aria-label="Type your question here" />
+            <button id="ai-send-btn" class="btn primary-btn" type="submit" aria-label="Send message">
+                <i class="fas fa-paper-plane"></i>
+                <span class="visually-hidden">Send</span>
+            </button>
+        </form>
+        
+    </div>
+</div>
+    <script src="js/cart.js" defer></script>
+     <script src="js/main.js" defer></script>
+     <script src="js/collection.js" defer></script>
+    <!-- Inline collection page JavaScript -->
+   
+
+</body>
+</html>
