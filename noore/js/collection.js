@@ -25,7 +25,7 @@ function renderProducts(products) {
         </div>
     </div>
     <div class="product-info">
-        <div class="product-category">${product.category.charAt(0).toUpperCase() + product.category.slice(1)}</div>
+        <!--<div class="product-category">${product.category.charAt(0).toUpperCase() + product.category.slice(1)}</div>-->
         <h3>${product.title}</h3>
         <div class="price">${product.original ? `<span class="original">PKR ${product.original}</span> ` : ''}PKR ${product.price}</div>
         <a href="${product.detailsLink}" class="btn outline-btn">View Details</a>
