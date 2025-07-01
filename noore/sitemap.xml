@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
+<urlset 
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 
+                      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
   <loc>https://noorejewel.shop/</loc>
@@ -15,107 +13,104 @@
 <url>
   <loc>https://noorejewel.shop/collection.html</loc>
   <lastmod>2025-06-23T07:28:32+00:00</lastmod>
-  <priority>1.00</priority>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://noorejewel.shop/about.html</loc>
   <lastmod>2025-06-23T07:28:32+00:00</lastmod>
-  <priority>1.00</priority>
+  <priority>0.60</priority>
 </url>
 <url>
   <loc>https://noorejewel.shop/contact.html</loc>
   <lastmod>2025-06-23T07:28:32+00:00</lastmod>
-  <priority>1.00</priority>
+  <priority>0.60</priority>
 </url>
 <url>
   <loc>https://noorejewel.shop/help.html</loc>
   <lastmod>2025-06-23T07:28:32+00:00</lastmod>
-  <priority>1.00</priority>
+  <priority>0.50</priority>
 </url>
 <url>
   <loc>https://noorejewel.shop/cart.html</loc>
   <lastmod>2025-06-23T07:28:32+00:00</lastmod>
-  <priority>1.00</priority>
+  <priority>0.40</priority>
 </url>
-<url>
-  <loc>https://noorejewel.shop/index.html</loc>
-  <lastmod>2025-06-23T08:30:10+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
+
+<!-- Product Pages -->
 <url>
   <loc>https://noorejewel.shop/products/deal1.html</loc>
   <lastmod>2025-06-23T08:30:10+00:00</lastmod>
-  <priority>1.00</priority>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://noorejewel.shop/products/deal2.html</loc>
   <lastmod>2025-06-23T08:30:10+00:00</lastmod>
-  <priority>1.00</priority>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://noorejewel.shop/products/deal3.html</loc>
   <lastmod>2025-06-23T08:30:10+00:00</lastmod>
-  <priority>1.00</priority>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://noorejewel.shop/products/deal4.html</loc>
   <lastmod>2025-06-23T08:30:10+00:00</lastmod>
-  <priority>1.00</priority>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://noorejewel.shop/products/deal5.html</loc>
   <lastmod>2025-06-23T08:30:10+00:00</lastmod>
-  <priority>1.00</priority>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://noorejewel.shop/products/deal6.html</loc>
   <lastmod>2025-06-23T08:30:10+00:00</lastmod>
-  <priority>1.00</priority>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://noorejewel.shop/products/deal7.html</loc>
   <lastmod>2025-06-23T08:30:10+00:00</lastmod>
-  <priority>1.00</priority>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://noorejewel.shop/products/deal8.html</loc>
   <lastmod>2025-06-23T08:30:10+00:00</lastmod>
-  <priority>1.00</priority>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://noorejewel.shop/products/deal9.html</loc>
   <lastmod>2025-06-23T08:30:10+00:00</lastmod>
-  <priority>1.00</priority>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.noorejewel.shop/products/moonnecklace.html</loc>
+  <loc>https://noorejewel.shop/products/moonnecklace.html</loc>
   <lastmod>2025-06-23T08:30:10+00:00</lastmod>
-  <priority>1.00</priority>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.noorejewel.shop/products/blackearrings.html</loc>
+  <loc>https://noorejewel.shop/products/blackearrings.html</loc>
   <lastmod>2025-06-23T08:30:10+00:00</lastmod>
-  <priority>1.00</priority>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.noorejewel.shop/products/bowpendant.html</loc>
+  <loc>https://noorejewel.shop/products/bowpendant.html</loc>
   <lastmod>2025-06-23T08:30:10+00:00</lastmod>
-  <priority>1.00</priority>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.noorejewel.shop/products/bracelet.html</loc>
+  <loc>https://noorejewel.shop/products/bracelet.html</loc>
   <lastmod>2025-06-23T08:30:10+00:00</lastmod>
-  <priority>1.00</priority>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.noorejewel.shop/products/crystal-studs.html</loc>
+  <loc>https://noorejewel.shop/products/crystal-studs.html</loc>
   <lastmod>2025-06-23T08:30:10+00:00</lastmod>
-  <priority>1.00</priority>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.noorejewel.shop/products/teardrop-earrings.html</loc>
+  <loc>https://noorejewel.shop/products/teardrop-earrings.html</loc>
   <lastmod>2025-06-23T08:30:10+00:00</lastmod>
-  <priority>1.00</priority>
+  <priority>0.80</priority>
 </url>
 
 </urlset>
