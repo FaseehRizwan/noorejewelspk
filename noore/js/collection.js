@@ -186,12 +186,21 @@ document.getElementById('modal-price').innerHTML = card.querySelector('.price').
                 });
                 break;
             default:
-                // Featured: bestsellers first
-                visibleProducts.sort((a, b) => {
-                    const aBestseller = (a.dataset.tags || '').includes('bestseller');
-                    const bBestseller = (b.dataset.tags || '').includes('bestseller');
-                    return bBestseller - aBestseller;
-                });
+                // If "all" is selected, show "main" tag products first, else keep your old logic
+                if (selectedCategory === 'all') {
+                    visibleProducts.sort((a, b) => {
+                        const aMain = (a.dataset.tags || '').toLowerCase().split(' ').includes('main') ? 1 : 0;
+                        const bMain = (b.dataset.tags || '').toLowerCase().split(' ').includes('main') ? 1 : 0;
+                        return bMain - aMain;
+                    });
+                } else {
+                    // Featured: bestsellers first
+                    visibleProducts.sort((a, b) => {
+                        const aBestseller = (a.dataset.tags || '').includes('bestseller');
+                        const bBestseller = (b.dataset.tags || '').includes('bestseller');
+                        return bBestseller - aBestseller;
+                    });
+                }
                 break;
         }
 
@@ -262,4 +271,41 @@ document.getElementById('modal-price').innerHTML = card.querySelector('.price').
                 filterAndSortProducts('all');
             });
         }
+
+      document.querySelectorAll('.product-card .product-image').forEach(imgContainer => {
+        let pressTimer;
+        let touchMoved = false;
+
+        // Touch start: start timer
+        imgContainer.addEventListener('touchstart', function(e) {
+          touchMoved = false;
+          pressTimer = setTimeout(() => {
+            imgContainer.closest('.product-card').classList.add('touch-active');
+          }, 400); // 400ms for long press
+        });
+
+        // Touch move: cancel if user moves finger
+        imgContainer.addEventListener('touchmove', function(e) {
+          touchMoved = true;
+          clearTimeout(pressTimer);
+        });
+
+        // Touch end: if not moved and not long press, treat as click
+        imgContainer.addEventListener('touchend', function(e) {
+          clearTimeout(pressTimer);
+          const card = imgContainer.closest('.product-card');
+          if (!touchMoved && !card.classList.contains('touch-active')) {
+            // Normal tap: go to product page
+            const link = imgContainer.querySelector('a.product-link');
+            if (link) window.location = link.href;
+          }
+        });
+
+        // Remove overlay on tap outside or after action
+        document.addEventListener('touchstart', function(e) {
+          if (!imgContainer.contains(e.target)) {
+            imgContainer.closest('.product-card').classList.remove('touch-active');
+          }
+        });
+      });
     });

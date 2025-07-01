@@ -1,31 +1,30 @@
-  // Product Gallery Thumbnail Switcher
+// Product Gallery Thumbnail Switcher
       document.addEventListener('DOMContentLoaded', function() {
         const thumbnails = document.querySelectorAll('.thumbnail');
-        const mainImage = document.getElementById('main-product-image');
-        if (thumbnails.length && mainImage) {
-          thumbnails.forEach(thumb => {
-            thumb.addEventListener('click', function() {
-              thumbnails.forEach(t => t.classList.remove('active'));
-              this.classList.add('active');
-              mainImage.style.opacity = '0';
-              setTimeout(() => {
-                mainImage.src = this.dataset.image;
-                mainImage.alt = this.querySelector('img').alt;
-                mainImage.style.opacity = '1';
-              }, 100);
+        const mainContainer = document.querySelector('.main-image');
+        
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', function() {
+                // Remove active class from all thumbnails
+                thumbnails.forEach(t => t.classList.remove('active'));
+                // Add active class to clicked thumbnail
+                this.classList.add('active');
+                
+                if(this.dataset.video) {
+                    // It's a video thumbnail
+                    mainContainer.innerHTML = `
+                        <video controls autoplay muted>
+                            <source src="${this.dataset.video}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    `;
+                } else if(this.dataset.image) {
+                    // It's an image thumbnail
+                    mainContainer.innerHTML = `
+                        <img id="main-product-image" src="${this.dataset.image}" alt="Black Earrings">
+                    `;
+                }
             });
-          });
-        }
-        // Tabs
-        const tabBtns = document.querySelectorAll('.tab-btn');
-        const tabContents = document.querySelectorAll('.tab-content');
-        tabBtns.forEach(btn => {
-          btn.addEventListener('click', function() {
-            tabBtns.forEach(b => b.classList.remove('active'));
-            tabContents.forEach(c => c.classList.remove('active'));
-            this.classList.add('active');
-            document.getElementById(this.dataset.tab).classList.add('active');
-          });
         });
       });
 

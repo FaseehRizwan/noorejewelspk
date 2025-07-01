@@ -245,6 +245,7 @@ function handleAddToCart(e) {
                 productPrice = priceText.replace(/[^\d.]/g, '');
             }
             productImage = productCard.querySelector('img').src;
+            tags = productCard.dataset.tags || ''; // <-- Always get tags from data-tags
         }
     }
 
