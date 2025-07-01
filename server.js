@@ -8,9 +8,16 @@ const PORT = 3000;
 
 app.use(express.static(path.join(__dirname, 'noore')));
 
-
+let productsCache = null;
+let cacheTimestamp = 0;
+const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
 
 app.get('/api/products', (req, res) => {
+    const now = Date.now();
+    if (productsCache && (now - cacheTimestamp < CACHE_DURATION)) {
+        return res.json(productsCache);
+    }
+
     const productsDir = path.join(__dirname, 'noore', 'products');
     fs.readdir(productsDir, (err, files) => {
         if (err) {
@@ -103,10 +110,11 @@ if (priceMatches && priceMatches.length > 0) {
             console.warn('No products extracted! Check your HTML structure and selectors.');
         }
 
+        productsCache = products;
+        cacheTimestamp = Date.now();
         res.json(products);
     });
 });
-
 
 
 
